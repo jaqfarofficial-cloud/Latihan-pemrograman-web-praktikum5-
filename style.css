@@ -1,0 +1,85 @@
+:root {
+  --warna-utama: #0b3d2e;
+  --warna-netral: #f2f2f2;
+  --warna-garis: #cfd8dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #1f2933;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  background: var(--warna-utama);
+  color: #ffffff;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  gap: 14px;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding: 22px;
+}
+
+.card {
+  border: 2px solid var(--warna-garis);
+  border-radius: 10px;
+  padding: 18px;
+  background: #ffffff;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.site-footer {
+  padding: 18px 22px;
+  background: var(--warna-netral);
+  text-align: center;
+}
+
+
+@media (min-width: 600px) {
+  .content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .content {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 599px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
